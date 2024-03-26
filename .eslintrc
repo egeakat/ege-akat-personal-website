@@ -37,7 +37,7 @@
     "import/no-duplicates": "error",
     "import/order": "off",
     "no-irregular-whitespace": "off",
-    "@typescript-eslint/no-unused-vars": ["warn", {"argsIgnorePattern": "^_"}],
+    "@typescript-eslint/no-unused-vars": ["error"],
     "object-curly-spacing": ["error", "never"],
     "react/jsx-curly-brace-presence": [2, "never"],
     "react/jsx-no-duplicate-props": "error",

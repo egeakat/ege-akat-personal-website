@@ -1,51 +1,18 @@
-import {
-  AcademicCapIcon,
-  ArrowDownTrayIcon,
-  BuildingOffice2Icon,
-  CalendarIcon,
-  FlagIcon,
-  MapIcon,
-  SparklesIcon,
-} from '@heroicons/react/24/outline';
+import {AcademicCapIcon, ArrowDownTrayIcon, FlagIcon, MapIcon, SparklesIcon} from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
-import heroImage from '../images/header-background.webp';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
-import profilepic from '../images/profilepic.jpg';
-import testimonialImage from '../images/testimonial.webp';
-import {
-  About,
-  ContactSection,
-  ContactType,
-  Hero,
-  HomepageMeta,
-  PortfolioItem,
-  SkillGroup,
-  Social,
-  TestimonialSection,
-  TimelineItem,
-} from './dataDef';
+import heroImage from '../images/background.webp';
+import profilepic from '../images/ege_akat.jpg';
+import {About, ContactSection, ContactType, Hero, HomepageMeta, SkillGroup, Social, TimelineItem} from './dataDef';
 
 /**
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Ege Akat',
+  description: 'Personal website for Ege Akat',
 };
 
 /**
@@ -55,11 +22,9 @@ export const SectionId = {
   Hero: 'hero',
   About: 'about',
   Contact: 'contact',
-  Portfolio: 'portfolio',
   Resume: 'resume',
   Skills: 'skills',
   Stats: 'stats',
-  Testimonials: 'testimonials',
 } as const;
 
 export type SectionId = (typeof SectionId)[keyof typeof SectionId];
@@ -69,24 +34,25 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `Ege Akat`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm a <strong className="text-stone-100">Cloud Software Engineer</strong>, with a strong passion for cloud app
+        development and machine learning.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        You can download my resume below, or contact me directly through my socials and my email at{' '}
+        <i>
+          {' '}
+          <a href="mailto:egeakat@gmail.com">egeakat@gmail.com</a>
+        </i>
       </p>
     </>
   ),
   actions: [
     {
-      href: '/assets/resume.pdf',
+      href: '/Ege_Akat_CV.pdf',
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
@@ -104,16 +70,22 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: ` As a cloud engineer and a computer science and engineering graduate, I have a strong passion for creating engineering solutions that are based
+  on modern structures. Even though I define myself as a learner I am currently trying to become a Cloud engineering expert with a passion for the
+  cloud. During my studies in university, I mostly focused on various machine learning, data processing and artificial intelligence courses. I am also
+  interested in Artificial Intelligence and Machine Learning and one of my goals is to develop my own models and deploy them.
+
+  I define myself as a really quick learner and a swiss knife engineer. I have no problems adapting to different fields of work and can accustom
+  myself to any projects in almost real time.
+  
+  In my personal life I’m an amateur chess player. I also enjoy doing research in my free time whether it’s about science, psychology, history or any
+  interesting topic I might be curious about. I also have an interest in Neurochemistry and psychology. I enjoy researching and learning about how
+  human consciousness and behaviour works and how can we understand it and make it better, healthier.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Ankara, Turkey', Icon: MapIcon},
+    {label: 'Nationality', text: 'Turkish', Icon: FlagIcon},
+    {label: 'Interests', text: 'Chess, Psychology, Indie Music', Icon: SparklesIcon},
+    {label: 'Study', text: 'Hacettepe University', Icon: AcademicCapIcon},
   ],
 };
 
@@ -122,22 +94,64 @@ export const aboutData: About = {
  */
 export const skills: SkillGroup[] = [
   {
-    name: 'Spoken languages',
+    name: 'Programming languages',
     skills: [
       {
-        name: 'English',
+        name: 'Javascript',
         level: 10,
       },
       {
-        name: 'French',
-        level: 4,
+        name: 'Java',
+        level: 10,
       },
       {
-        name: 'Spanish',
+        name: 'Python',
+        level: 3,
+      },
+      {
+        name: 'Golang',
+        level: 3,
+      },
+      {
+        name: 'C/C++',
+        level: 3,
+      },
+      {
+        name: 'PHP',
         level: 3,
       },
     ],
   },
+  {
+    name: 'Backend development',
+    skills: [
+      {
+        name: 'AWS SDK',
+        level: 8,
+      },
+      {
+        name: 'Spring Boot',
+        level: 5,
+      },
+      {
+        name: 'Node.js',
+        level: 4,
+      },
+      {
+        name: 'Express',
+        level: 4,
+      },
+      {
+        name: 'Flask',
+        level: 4,
+      },
+      {
+        name: 'Laravel',
+        level: 4,
+      },
+    ],
+  },
+
   {
     name: 'Frontend development',
     skills: [
@@ -146,46 +160,58 @@ export const skills: SkillGroup[] = [
         level: 9,
       },
       {
-        name: 'Typescript',
+        name: 'Vue',
         level: 7,
       },
       {
-        name: 'GraphQL',
+        name: 'Tailwind',
         level: 6,
       },
     ],
   },
   {
-    name: 'Backend development',
+    name: 'DevOps',
     skills: [
       {
-        name: 'Node.js',
-        level: 8,
+        name: 'Jenkins',
+        level: 10,
       },
       {
-        name: 'Rust',
-        level: 5,
+        name: 'GNU/Linux',
+        level: 4,
       },
       {
-        name: 'Golang',
+        name: 'AWS CLI',
+        level: 4,
+      },
+      {
+        name: 'Serverless',
+        level: 4,
+      },
+      {
+        name: 'Bash',
+        level: 4,
+      },
+      {
+        name: 'SQL',
+        level: 4,
+      },
+      {
+        name: 'PostgreSQL / MySQL',
         level: 4,
       },
     ],
   },
   {
-    name: 'Mobile development',
+    name: 'Spoken languages',
     skills: [
       {
-        name: 'React Native',
-        level: 9,
+        name: 'English',
+        level: 10,
       },
       {
-        name: 'Flutter',
+        name: 'Turkish',
         level: 4,
-      },
-      {
-        name: 'Swift',
-        level: 3,
       },
     ],
   },
@@ -194,114 +220,121 @@ export const skills: SkillGroup[] = [
 /**
  * Portfolio section
  */
-export const portfolioItems: PortfolioItem[] = [
-  {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage1,
-  },
-  {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage2,
-  },
-  {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage3,
-  },
-  {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage4,
-  },
-  {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage5,
-  },
-  {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage7,
-  },
-  {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage8,
-  },
-  {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage11,
-  },
-];
 
 /**
  * Resume section -- TODO: Standardize resume contact format or offer MDX
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'September 2018 - February 2024',
+    location: 'Hacettepe University',
+    title: 'B.S. Computer Science and Engineering',
+    content: (
+      <ul>
+        <li>• Studied Computer Science and Engineering</li>
+        <li>
+          • Took various courses mostly focusing on Data Engineering, Machine Learning and Artificial Intelligence
+        </li>
+        <li>• 2.86 GPA</li>
+      </ul>
+    ),
   },
+];
+
+export const extracurricularActivity: TimelineItem[] = [
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'Nov. 2019 - Oct. 2021',
+    location: 'Hacettepe Free Software Society',
+    title: 'Founder & Chairman',
+    content: (
+      <ul>
+        <li>• Assembled and led the board of directors of Hacettepe Free Software Society</li>
+        <li>• Have been the organizer for many software courses and the lecturer for some of them</li>
+        <li>
+          • Organized many panels and interviews with some of the important people from the Academy and the leading
+          industry experts
+        </li>
+        <li>• Raised awareness about free software</li>
+        <li>
+          • Created a friendly environment for Hacettepe University students to socialize, self improve and network
+        </li>
+        <li>• Developed the website and the systems needed for the organization</li>
+      </ul>
+    ),
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'Mar. 2022 - Apr. 2024',
+    location: 'Arçelik Global',
+    title: 'IoT R&D Trainee Engineer',
     content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
+      <ul>
+        <li>
+          • Took part in the Cloud Development Team, crafting innovative solutions for the Internal tools squad using
+          JavaScript, Java, and AWS Cloud services for both backend and frontend applications.
+        </li>
+        <li>
+          • Architected and deployed scalable solutions using various AWS services including Lambda, S3, ApiGateway, and
+          CloudFormation etc. enhancing system efficiency and reliability.
+        </li>
+      </ul>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'Nov. 2018 - Mar. 2022',
+    location: 'Hacettepe University',
+    title: 'Software Developer and Content Specialist',
     content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
+      <ul>
+        <li>
+          • Led the development of web management systems, enhancing the digital presence of the Lifelong Learning
+          Center through innovative content and social media strategies.
+        </li>
+        <li>
+          • Utilized PHP, Vue.js, GIMP, WordPress, and Google Analytics to develop, manage, and analyze online content,
+          significantly increasing user en- gagement.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    date: 'Aug. 2020 - Sep. 2020',
+    location: 'Onedio',
+    title: 'Software Development Intern',
+    content: (
+      <ul>
+        <li>
+          • Contributed to the creation of Onedio Vitrin, a platform for sharing paid or sponsored articles, enhancing
+          the company’s content delivery capabilities.
+        </li>
+        <li>
+          • Designed database structures and developed ORM models, facilitating robust data management and streamlined
+          CRUD operations.
+        </li>
+        <li>
+          • Employed Node.js, leveraging KOA and Sequelize for backend development, improving application functionality
+          and performance.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    date: 'Sep. 2019 - Nov. 2019',
+    location: 'Picus Security Inc.',
+    title: 'Backend Developer',
+    content: (
+      <ul>
+        <li>
+          • Integrated AWS and Zoho CRM into a dev-ops automation tool, streamlining operations and enhancing customer
+          relationship management.
+        </li>
+        <li>
+          • Specialized in Python Flask development, contributing to the backend architecture and system integration
+          efforts.
+        </li>
+      </ul>
     ),
   },
 ];
@@ -309,54 +342,35 @@ export const experience: TimelineItem[] = [
 /**
  * Testimonial section
  */
-export const testimonial: TestimonialSection = {
-  imageSrc: testimonialImage,
-  testimonials: [
-    {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
-    },
-    {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
-    },
-    {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
-    },
-  ],
-};
 
 /**
  * Contact section
  */
 
 export const contact: ContactSection = {
-  headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  headerText: 'Get in touch with me.',
+  description:
+    'You can get in touch with me by sending an email, or by reaching out to me on social media. I am always open to new opportunities and collaborations.',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'egeakat@gmail.com',
+      href: 'mailto:egeakat@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'Ankara, Turkey',
+      href: 'https://www.google.com/maps/place/Ankara/@39.9032599,32.5979591,11z/',
     },
     {
       type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      text: '@egeakat',
+      href: 'https://www.instagram.com/egeakat/',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'egeakat',
+      href: 'https://github.com/egeakat',
     },
   ],
 };
@@ -365,9 +379,7 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/egeakat'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/egeakat/'},
+  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/egeakat/'},
 ];
