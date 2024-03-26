@@ -23,12 +23,14 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   trailingSlash: false,
+  output: 'export',
   images: {
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'images.unsplash.com',
-      },{
+      },
+      {
         protocol: 'https',
         hostname: 'source.unsplash.com',
       },
