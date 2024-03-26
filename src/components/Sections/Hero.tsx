@@ -37,8 +37,7 @@ const Hero: FC = memo(() => {
                   download
                   href={href}
                   key={text}
-                  target="_blank"
-                  >
+                  target="_blank">
                   {text}
                   {Icon && <Icon className="h-5 w-5 text-white sm:h-6 sm:w-6" />}
                 </a>
