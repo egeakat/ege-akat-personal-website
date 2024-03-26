@@ -24,6 +24,7 @@ const nextConfig = {
   swcMinify: true,
   trailingSlash: false,
   output: 'export',
+  assetPrefix: '',
   images: {
     remotePatterns: [
       {
