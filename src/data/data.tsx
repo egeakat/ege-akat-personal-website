@@ -228,7 +228,7 @@ export const education: TimelineItem[] = [
   {
     date: 'September 2018 - February 2024',
     location: 'Hacettepe University',
-    title: 'B.S. Computer Science and Engineering',
+    title: 'B.S. Computer Engineering',
     content: (
       <ul>
         <li>• Studied Computer Science and Engineering</li>
